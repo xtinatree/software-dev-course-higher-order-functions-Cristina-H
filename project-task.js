@@ -36,20 +36,26 @@ Create a function `filterProducts` that accepts:
 - a callback function
 
 The callback should determine which products to include.
-Example use case: filter by in-stock items or by price.
+Example: filter by availability or price threshold.
+
+Step-by-Step:
+1. Define the `filterProducts` function with appropriate parameters.
+2. Use the `filter()` method to apply the callback to the array.
+3. Return the filtered result.
 */
-// function filterProducts(products, callback) {
-//     // TODO: return products.filter(callback);
-// }
+
 
 /*
 🔹 Task 2: Transform Product Names
 
 Use `map()` to create a new array of product names in UPPERCASE.
+
+Step-by-Step:
+1. Use `map()` on the products array.
+2. Extract and transform the `name` property to uppercase.
+3. Store the result in a new variable.
 */
-// const uppercasedNames = products.map(function(product) {
-//     return product.name.toUpperCase();
-// });
+
 
 /*
 🔹 Task 3: Generate Discounted Prices
@@ -58,23 +64,30 @@ Write a higher-order function `applyDiscount` that:
 - Accepts a discount percentage
 - Returns a function that takes a product and returns a discounted price
 
-Use this with `map()` to create a new array of discounted products.
+Step-by-Step:
+1. Define a function `applyDiscount` that takes `discountPercent`.
+2. Return a new function that takes a product object.
+3. Use this returned function inside a `map()` call to apply discounts to all products.
 */
-// function applyDiscount(discountPercent) {
-//     // TODO: return a function that takes a product and returns a discounted version
-// }
+
 
 /*
 🔹 Task 4: Calculate Total Inventory Value
 
 Use `reduce()` to calculate the total value of products that are currently in stock.
-*/
-// const totalValueInStock = products.reduce(function(acc, product) {
-//     return product.inStock ? acc + product.price : acc;
-// }, 0);
 
-// ✅ Use console.log() to verify your results
-// console.log(filterProducts(products, p => p.inStock));
-// console.log(uppercasedNames);
-// console.log(discountedProducts);
-// console.log(totalValueInStock);
+Step-by-Step:
+1. Use the `reduce()` method on the products array.
+2. Add only the prices of products where `inStock` is true.
+3. Store the total in a new variable.
+*/
+
+
+// ============================================
+// 🧪 Console Test Your Work
+// ============================================
+
+// console.log("Filtered products:", ...);
+// console.log("Uppercased names:", ...);
+// console.log("Discounted products:", ...);
+// console.log("Total value in stock:", ...);
